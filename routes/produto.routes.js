@@ -15,10 +15,10 @@ export const routeProduto = (app) => {
    router.get('/:id', produtoController.findById)
 
    // Buscar os produtos pelo status
-   router.get('/:status', produtoController.findByStatus)
+   router.get('/status/:status', produtoController.findByStatus)
 
    // Atualizar um produto
-   router.put('/:id', produtoController.update)
+   router.patch('/:id', produtoController.update)
 
    // Deletar um produto
    router.delete('/:id', produtoController.deleteById)
